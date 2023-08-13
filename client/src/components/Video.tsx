@@ -4,7 +4,7 @@ function Video({ giver, embedId }) {
   return (
     // Code taken from
     // https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
-    <div className='video-container mx-auto rounded-lg mb-3 bg-green-500 p-2'>
+    <div className='video-container'>
       <SubHeading
         text={`Song Choice : ${giver.youtube.title} by ${giver.youtube.artist}`}
       />

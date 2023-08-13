@@ -2,7 +2,7 @@ import SubHeading from './SubHeading';
 
 function Quote({ quote }) {
   return (
-    <blockquote className='rounded-lg text-3xl'>
+    <blockquote className='rounded-lg'>
       <SubHeading text='Quote' />
       <p className='italic'>
         <span>“ </span>

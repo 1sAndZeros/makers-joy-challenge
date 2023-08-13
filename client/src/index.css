@@ -9,6 +9,7 @@
   --clr-secondary: #00DFA2;
   --clr-info: #F6FA70;
   --clr-accent: #FF0060;
+  --clr-pink: #e06c9f;
   --makers-black: #000;
   --makers-white: #fff;
 
@@ -30,7 +31,7 @@
   --ff-secondary: 'Jost';
 
   color: var(--makers-black);
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-accent);
 
   font-size: var(--fs-400);
   font-family: var(--ff-secondary);
@@ -57,7 +58,7 @@
 
 main {
   margin: 0;
-  background-color: #FF0060;
+  background-color: var(--clr-accent);
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 3fr 1fr;
@@ -86,6 +87,20 @@ main>div {
 h2 {
   font-size: var(--fs-700);
   margin-bottom: 0.75rem;
+  background-color: var(--clr-pink);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.subheading {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-pink);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--fs-300);
+  width: max-content;
+  margin: 0 auto;
 }
 
 .joy {
@@ -97,6 +112,9 @@ h2 {
   width: 100%;
   max-width: 500px;
   margin: 0 auto 0.75rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-secondary);
 }
 
 .video-responsive {
