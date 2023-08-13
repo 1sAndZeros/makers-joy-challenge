@@ -1,14 +1,14 @@
-# vite-mern-template
+# Makers Joy Challenge
 
-> Simple opinionated boilerplate for MERN stack with Vite and Redux Toolkit.
-> This includes React+TypeScript with familiar configuration for vite.config.ts for front-end and Express+TypeScript for back-end.
+> This app shows all the previous 'Joy Givers' from the July 2023 Makers Cohort
 
-This has been created with the official [Vite](https://vitejs.dev/) template (`npm create vite@latest`) and some extended setup. There are two separate folders called `server` and `client`. The entry point for the backend is `server/src/index.js`.
+This has been created with npx degit apicgg/vite-mern-template using the official [Vite](https://vitejs.dev/) template (`npm create vite@latest`) and some extended setup. There are two separate folders called `server` and `client`. The entry point for the backend is `server/src/index.js`.
 
-> Thanks to [awesome-vite](https://github.com/vitejs/awesome-vite) for publishing this project.
+> Thanks to [apicgg](https://github.com/apicgg/) for creating this project starter.
 
 ## Tools
 
+> Not all are used yet
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -21,16 +21,14 @@ This has been created with the official [Vite](https://vitejs.dev/) template (`n
 - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
 - [express-async-handler](https://www.npmjs.com/package/express-async-handler)
 
-#### The dependency versions are managed by [depfu](https://depfu.com/).
+## Preview
 
-## Demo
-
-![vite-mern-template-gh-demo](https://user-images.githubusercontent.com/78271602/234833309-fe8df564-2895-4727-be1e-c807fe142333.gif)
+![preview](./client/public/preview.png)
 
 ## Installation
 
 ```bash
-npx degit apicgg/vite-mern-template my-app
+npx degit 1sAndZeros/makers-joy-challenge my-app
 ```
 
 ## Install dependencies
@@ -57,14 +55,15 @@ npm run dev
 
 ## TODO
 
-- Include testing frameworks, eslint and prettier.
-- Create a npm CLI library for scaffolding projects.
+- Add Button
+- Random Selector
+- Make Responsive
 
 ## License
 
 MIT License.
 
-Please review the [License](https://github.com/apicgg/vite-mern-template/blob/main/LICENSE).
+Please review the [License](https://github.com/1sAndZeros/makers-joy-challenge/blob/main/LICENSE).
 
 ## Contributors ✨
 
