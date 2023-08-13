@@ -63,7 +63,7 @@ function App() {
                 return !previousNames.includes(name);
               })
               .map((name) => {
-                return <Name key={name} name={name} />;
+                return <Name key={name} name={name} setViewDate={undefined} date={undefined} children={undefined} />;
               })}
           </div>
         </div>

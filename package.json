@@ -1,5 +1,5 @@
 {
-  "name": "vite-mern-template",
+  "name": "makers-joy-challenge",
   "version": "1.0.0",
   "main": "server/src/index.ts",
   "scripts": {
