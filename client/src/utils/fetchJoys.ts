@@ -1,4 +1,4 @@
-import { Joy } from '../types/Joy';
+import { Joy } from 'types';
 import { Dispatch, SetStateAction } from 'react';
 
 const fetchJoys = async (
