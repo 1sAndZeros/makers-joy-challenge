@@ -1,6 +1,14 @@
-import SubHeading from './SubHeading';
+import { FC } from 'react';
+import { SubHeading } from 'components';
 
-function Quote({ quote }) {
+interface Props {
+  quote: {
+    message: string;
+    name?: string;
+  };
+}
+
+const Quote: FC<Props> = ({ quote }) => {
   return (
     <blockquote className='rounded-lg'>
       <SubHeading text='Quote' />
@@ -15,6 +23,6 @@ function Quote({ quote }) {
       </p>
     </blockquote>
   );
-}
+};
 
 export default Quote;

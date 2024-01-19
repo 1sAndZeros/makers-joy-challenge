@@ -1,12 +1,19 @@
-import SubHeading from './SubHeading';
+import { FC } from 'react';
+import { SubHeading } from 'components';
+import { Joy } from 'types';
 
-function Video({ giver, embedId }) {
+interface Props {
+  joy: Joy;
+  embedId: string;
+}
+
+const Video: FC<Props> = ({ joy, embedId }) => {
   return (
     // Code taken from
     // https://dev.to/bravemaster619/simplest-way-to-embed-a-youtube-video-in-your-react-app-3bk2
     <div className='video-container'>
       <SubHeading
-        text={`Song Choice : ${giver.youtube.title} by ${giver.youtube.artist}`}
+        text={`Song Choice : ${joy.youtube.title} by ${joy.youtube.artist}`}
       />
       <div className='video-responsive'>
         <iframe
@@ -20,6 +27,6 @@ function Video({ giver, embedId }) {
       </div>
     </div>
   );
-}
+};
 
 export default Video;

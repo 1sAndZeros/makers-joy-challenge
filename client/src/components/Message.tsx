@@ -1,12 +1,13 @@
-import SubHeading from "./SubHeading";
+import { FC } from 'react';
+import { SubHeading } from 'components';
 
-function Message({ message }) {
+const Message: FC<{ message: string }> = ({ message }) => {
   return (
     <div className='message rounded-lg'>
-      <SubHeading text='Message'/>
-      <p className='text-md'>{message || 'No Message'}</p>
+      <SubHeading text='Message' />
+      <p className='text-md'>{message}</p>
     </div>
   );
-}
+};
 
 export default Message;

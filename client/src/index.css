@@ -93,13 +93,12 @@ h2 {
 }
 
 .subheading {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   background-color: var(--clr-pink);
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-size: var(--fs-300);
-  width: max-content;
   margin: 0 auto;
 }
 
@@ -226,7 +225,8 @@ html {
     font-size: var(--fs-500);
   }
 
-  blockquote, .message {
+  blockquote,
+  .message {
     width: 100%;
     max-width: 100%;
   }
