@@ -5,7 +5,8 @@ const fetchJoys = async (
   setJoys: Dispatch<SetStateAction<Joy[]>>
 ) => {
   try {
-    const res = await fetch('../src/assets/joys.json', {
+    // ../src/assets/joys.json
+    const res = await fetch('/.netlify/functions/fetch-joys', {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
