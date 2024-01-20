@@ -244,7 +244,7 @@ html {
   }
 
   main {
-    grid-template-columns: 150px auto;
+    grid-template-columns: 100px auto;
     padding: 1rem;
   }
 }
