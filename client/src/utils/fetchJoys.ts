@@ -1,12 +1,10 @@
 import { Joy } from 'types';
 import { Dispatch, SetStateAction } from 'react';
 
-const fetchJoys = async (
-  setJoys: Dispatch<SetStateAction<Joy[]>>
-) => {
+const fetchJoys = async (setJoys: Dispatch<SetStateAction<Joy[]>>) => {
   try {
     // ../src/assets/joys.json
-    const res = await fetch('/.netlify/functions/fetch-joys', {
+    const res = await fetch('/api/joys', {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',

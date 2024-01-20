@@ -1,10 +1,7 @@
 [build]
-	command = "npm run build"
-	functions = ".netlify/functions"
-	publish = "dist"
+  functions = "functions"
 
-[functions]
-        node_bundler = "esbuild"
-
-[dev]
-        targetPort = 3000
+[[redirects]]
+  from = "/api/joys"
+  to = "/.netlify/functions/joys"
+  status = 200
