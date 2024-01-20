@@ -30,6 +30,8 @@
     sans-serif;
   --ff-secondary: 'Jost';
 
+  --nav-height: 74px;
+
   color: var(--makers-black);
   background-color: var(--clr-accent);
 
@@ -46,14 +48,15 @@
 .title {
   box-sizing: border-box;
   margin: 0;
-  padding: 2rem;
   font-size: var(--fs-800);
   font-family: var(--ff-secondary);
   background-color: var(--clr-info);
   font-weight: 800;
   border-bottom: 5px solid var(--makers-black);
   text-transform: uppercase;
-  height: 129px;
+  height: var(--nav-height);
+  display: grid;
+  place-items: center;
 }
 
 main {
@@ -61,27 +64,30 @@ main {
   background-color: var(--clr-accent);
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: minmax(25%, 200px) auto minmax(25%, 200px);
   padding: 1.5rem;
   text-align: center;
-  height: calc(100vh - 96px - 32px - 5px);
+  height: calc(100vh - var(--nav-height));
 }
 
 main>div {
   border-radius: 1rem;
   padding: 0.5rem;
   overflow-y: scroll;
+  scrollbar-width: none;
   padding: 1rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .previous,
 .next {
   background-color: var(--clr-info);
   flex-basis: 400px;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  min-width: 200px;
 }
 
 h2 {
@@ -157,7 +163,8 @@ blockquote {
   gap: 0.5rem;
   flex-grow: 1;
   overflow-y: scroll;
-  padding: 0.75rem;
+  scrollbar-width: none;
+  padding: 0.5rem 0;
 }
 
 .name {
@@ -166,6 +173,8 @@ blockquote {
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  transform: scale(0.95);
 }
 
 .name h3 {
@@ -179,18 +188,25 @@ blockquote {
 
 button {
   transition: all 200ms ease-in-out;
+  box-sizing: content-box;
 }
 
 button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 2px var(--clr-accent);
+  transform: scale(1);
+  outline: var(--clr-accent) solid 2px;
+  margin: 0 2px;
 }
 
 html {
   overflow: hidden;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
+
+  :root {
+    font-size: 10px;
+  }
+
   .next {
     display: none;
   }
@@ -199,41 +215,36 @@ html {
     margin: 0;
     background-color: #FF0060;
     display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: minmax(200px, 25%) auto;
     padding: 1rem;
-    text-align: center;
-    height: calc(100vh - 36px - 32px);
+    height: calc(100vh - var(--nav-height));
   }
 
   .title {
-    font-size: var(--fs-600);
-    max-height: 129px;
-    height: auto;
-    padding: 1rem;
+    font-size: var(--fs-700);
   }
 
   .date {
     display: none;
   }
-
-  .previous {
-    padding: 0.5rem;
-  }
-
-  .previous h2 {
-    font-size: var(--fs-500);
-  }
-
-  blockquote,
-  .message {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 
 @media (max-width: 1100px) {
-  h2 {
-    font-size: var(--fs-600);
+
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  :root {
+    font-size: 8px;
+    --nav-height: 50px;
+  }
+
+  main {
+    grid-template-columns: 150px auto;
+    padding: 1rem;
   }
 }
