@@ -1,5 +1,5 @@
 import React from 'react';
-import { cohort } from 'data/joys.json';
+import { cohort } from 'data/joys_deloitte.json';
 import { Joy } from 'types';
 import { Name } from 'components';
 

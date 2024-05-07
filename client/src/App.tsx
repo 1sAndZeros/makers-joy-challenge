@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
-import { Previous, Nominate, JoyDetails } from 'components';
-import { Joy } from 'types';
-import fetchJoys from 'utils/fetchJoys';
+import { useState, useEffect } from "react";
+import { Previous, Nominate, JoyDetails } from "components";
+import { Joy } from "types";
+// import fetchJoys from 'utils/fetchJoys';
+import data from "data/joys_deloitte.json";
 
 function App() {
   const [joys, setJoys] = useState<Joy[]>([]);
@@ -9,7 +10,9 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetchJoys(setJoys);
+      // fetchJoys(setJoys);
+      console.log(data);
+      setJoys(data.joys);
     }, 2000);
   }, []);
 
@@ -20,7 +23,7 @@ function App() {
 
   const changeGiver = (id: number) => {
     const giver = joys.find((joy) => {
-      console.log('joy.id', joy.id);
+      console.log("joy.id", joy.id);
       return joy.id === id;
     });
     if (giver) setActiveJoy(giver);
@@ -28,7 +31,7 @@ function App() {
 
   return (
     <>
-      <h1 className='title text-center'>✨ Makers Joy Challenge ✨</h1>
+      <h1 className="title text-center">✨ Makers Joy Challenge ✨</h1>
       <main>
         <Previous joys={joys} handleClick={changeGiver} />
         <JoyDetails joy={activeJoy} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Joy } from 'types';
-import { Video, Quote, Message, SubHeading } from 'components';
+import { Video, Quote, Message } from 'components';
 
 interface Props {
   joy: Joy | null;
